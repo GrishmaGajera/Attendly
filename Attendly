@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attendly</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+.ekaksh-logo {  
+    width: min(92vw, 620px);
+    aspect-ratio: 1 / 1;
+    display: block;
+  filter: drop-shadow(0 0 0.6px #a87424) drop-shadow(0 0 0.6px #a87424);  /* ← adds weight */
+   background: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%22292%20235%20743%20568%22%3E%0A%3Cdefs%3E%0A%3ClinearGradient%20id=%22gold%22%20x1=%220%22%20y1=%220%22%20x2=%22.18%22%20y2=%221%22%3E%0A%3Cstop%20offset=%220%22%20stop-color=%22%23fff1b8%22/%3E%0A%3Cstop%20offset=%22.20%22%20stop-color=%22%23dfbb67%22/%3E%0A%3Cstop%20offset=%22.47%22%20stop-color=%22%23bd8b34%22/%3E%0A%3Cstop%20offset=%22.70%22%20stop-color=%22%23edc875%22/%3E%0A%3Cstop%20offset=%221%22%20stop-color=%22%23a87424%22/%3E%0A%3C/linearGradient%3E%0A%3Cfilter%20id=%22shadow%22%20x=%22-20%25%22%20y=%22-20%25%22%20width=%22140%25%22%20height=%22150%25%22%3E%0A%3CfeDropShadow%20dx=%220%22%20dy=%225%22%20stdDeviation=%224%22%20flood-color=%22%23000%22%20flood-opacity=%22.42%22/%3E%0A%3C/filter%3E%0A%3C/defs%3E%0A%3Cg%20fill=%22url(%23gold)%22%20fill-rule=%22evenodd%22%20filter=%22url(%23shadow)%22%3E%0A%3Cpath%20d=%22M%20672.7,245.9%20C%20668.9,244.4%20656.9,252.2%20648.4,253.7%20C%20639.9,255.2%20630.6,254.6%20621.7,255.0%20C%20612.7,255.3%20603.8,255.8%20594.9,255.7%20C%20586.0,255.6%20577.3,254.6%20568.5,254.3%20C%20559.6,253.9%20550.5,253.8%20541.6,253.4%20C%20532.7,253.0%20523.9,252.3%20515.1,251.7%20C%20506.3,251.2%20497.5,250.5%20488.5,250.0%20C%20479.6,249.6%20470.6,249.3%20461.6,249.1%20C%20452.7,248.9%20443.7,248.7%20434.8,248.9%20C%20425.9,249.0%20417.1,249.2%20408.4,249.9%20C%20399.7,250.7%20391.2,251.7%20382.8,253.2%20C%20374.4,254.7%20366.0,256.4%20358.0,259.2%20C%20350.1,261.9%20342.1,265.0%20335.0,269.6%20C%20327.9,274.1%20320.7,279.8%20315.5,286.4%20C%20310.4,293.0%20306.2,300.9%20304.0,309.0%20C%20301.8,317.1%20301.1,326.7%20302.4,335.0%20C%20303.7,343.3%20306.8,352.0%20311.7,358.7%20C%20316.5,365.3%20329.0,374.2%20331.7,375.0%20C%20334.3,375.8%20329.4,369.4%20327.4,363.4%20C%20325.5,357.5%20320.4,347.6%20319.8,339.4%20C%20319.2,331.2%20321.0,321.9%20323.9,314.0%20C%20326.9,306.1%20331.8,298.1%20337.5,292.0%20C%20343.2,286.0%20350.3,280.6%20358.0,277.6%20C%20365.7,274.6%20375.8,272.7%20383.9,273.8%20C%20392.0,275.0%20401.4,278.5%20406.5,284.3%20C%20411.6,290.2%20413.0,300.2%20414.3,308.7%20C%20415.7,317.2%20414.5,326.4%20414.5,335.2%20C%20414.5,344.1%20414.5,352.8%20414.4,361.8%20C%20414.3,370.7%20413.8,379.9%20414.1,388.7%20C%20414.3,397.6%20415.6,406.2%20415.6,415.0%20C%20415.7,423.9%20414.8,433.0%20414.6,441.8%20C%20414.4,450.7%20414.5,459.3%20414.4,468.2%20C%20414.3,477.1%20414.0,486.1%20413.9,495.1%20C%20413.9,504.2%20414.0,513.4%20414.1,522.4%20C%20414.2,531.4%20414.3,540.2%20414.3,549.1%20C%20414.4,558.0%20414.4,567.0%20414.5,575.7%20C%20414.7,584.5%20414.9,593.2%20415.1,601.9%20C%20415.2,610.6%20415.4,619.0%20415.4,627.8%20C%20415.4,636.6%20415.2,645.7%20415.0,654.7%20C%20414.9,663.7%20414.9,672.8%20414.3,681.6%20C%20413.8,690.5%20414.0,699.6%20411.8,707.8%20C%20409.7,716.0%20406.7,724.4%20401.7,730.8%20C%20396.6,737.3%20388.3,741.9%20381.3,746.7%20C%20374.3,751.6%20365.3,753.9%20359.6,759.9%20C%20353.9,765.8%20346.5,780.7%20347.3,782.4%20C%20348.0,784.1%20357.5,773.9%20364.0,770.0%20C%20370.6,766.1%20378.6,761.6%20386.6,759.0%20C%20394.6,756.4%20403.3,755.4%20412.0,754.4%20C%20420.6,753.4%20429.7,753.0%20438.6,752.8%20C%20447.5,752.7%20456.6,753.0%20465.5,753.5%20C%20474.4,753.9%20483.2,754.8%20492.0,755.6%20C%20500.8,756.4%20509.4,757.5%20518.0,758.4%20C%20526.7,759.4%20535.2,760.5%20543.9,761.4%20C%20552.5,762.3%20561.2,763.2%20570.1,763.9%20C%20578.9,764.5%20588.1,765.3%20597.0,765.3%20C%20605.9,765.2%20615.0,765.0%20623.4,763.5%20C%20631.8,762.0%20640.2,759.9%20647.7,756.0%20C%20655.1,752.2%20662.2,746.6%20667.9,740.4%20C%20673.6,734.2%20678.4,726.6%20681.8,718.8%20C%20685.1,711.0%20689.7,695.7%20688.1,693.8%20C%20686.5,691.9%20678.2,702.5%20672.1,707.4%20C%20666.0,712.3%20658.8,719.2%20651.5,723.5%20C%20644.3,727.8%20636.5,730.9%20628.4,733.4%20C%20620.4,735.9%20611.9,737.3%20603.3,738.5%20C%20594.7,739.7%20585.7,740.4%20577.0,740.5%20C%20568.3,740.6%20559.6,739.6%20550.8,739.1%20C%20542.0,738.5%20532.9,738.1%20524.2,737.2%20C%20515.5,736.2%20506.8,735.6%20498.8,733.3%20C%20490.7,731.0%20481.1,729.2%20476.0,723.6%20C%20470.9,717.9%20469.7,707.7%20468.3,699.1%20C%20467.0,690.6%20468.1,681.3%20468.0,672.3%20C%20468.0,663.3%20468.0,654.1%20468.0,645.0%20C%20468.0,635.9%20468.0,626.9%20468.0,617.8%20C%20468.0,608.7%20468.0,599.7%20468.0,590.6%20C%20468.0,581.6%20468.0,572.5%20468.0,563.4%20C%20468.0,554.3%20465.9,544.2%20467.9,536.1%20C%20469.9,528.1%20475.6,521.8%20480.1,515.1%20C%20484.7,508.5%20489.7,502.4%20495.2,496.0%20C%20500.6,489.6%20506.7,483.1%20512.7,476.7%20C%20518.7,470.3%20524.6,463.4%20531.2,457.7%20C%20537.8,452.0%20544.7,445.2%20552.4,442.5%20C%20560.1,439.8%20569.8,439.4%20577.5,441.6%20C%20585.3,443.7%20592.3,450.0%20599.0,455.5%20C%20605.7,461.0%20611.3,469.8%20617.5,474.6%20C%20623.7,479.3%20630.5,486.0%20636.0,484.2%20C%20641.6,482.5%20651.6,470.4%20650.9,463.9%20C%20650.2,457.4%20638.5,451.2%20632.0,445.3%20C%20625.4,439.3%20618.7,432.8%20611.7,427.9%20C%20604.6,423.1%20597.5,418.8%20589.6,416.0%20C%20581.7,413.2%20572.7,411.1%20564.3,411.1%20C%20555.9,411.0%20547.0,412.7%20539.2,415.7%20C%20531.3,418.6%20524.1,423.5%20517.2,428.8%20C%20510.4,434.0%20504.6,441.0%20498.1,447.1%20C%20491.7,453.3%20483.6,464.8%20478.6,465.6%20C%20473.5,466.3%20469.7,458.5%20467.9,451.7%20C%20466.2,444.9%20468.0,433.8%20468.0,424.8%20C%20468.0,415.8%20468.0,406.5%20468.0,397.5%20C%20468.0,388.4%20468.0,379.4%20468.0,370.4%20C%20468.0,361.3%20468.0,352.1%20468.0,343.1%20C%20468.0,334.0%20467.1,324.7%20468.0,315.9%20C%20469.0,307.2%20469.4,297.4%20473.7,290.8%20C%20478.0,284.2%20486.0,279.0%20493.8,276.4%20C%20501.6,273.9%20511.5,275.2%20520.4,275.3%20C%20529.2,275.4%20538.0,276.3%20546.8,277.0%20C%20555.5,277.8%20564.2,278.8%20572.9,279.6%20C%20581.6,280.5%20590.4,281.7%20599.2,282.2%20C%20608.0,282.7%20617.1,283.5%20625.8,282.7%20C%20634.4,281.9%20643.4,280.9%20651.0,277.6%20C%20658.6,274.2%20667.6,267.9%20671.2,262.7%20C%20674.8,257.4%20676.5,247.4%20672.7,245.9%20Z%22/%3E%3Cpath%20d=%22M%20821.0,293.0%20C%20814.2,293.2%20803.9,292.4%20800.6,294.5%20C%20797.3,296.6%20801.8,300.5%20801.2,305.5%20C%20800.6,310.6%20799.5,318.8%20797.1,324.8%20C%20794.8,330.7%20790.7,336.0%20786.9,341.4%20C%20783.1,346.7%20778.8,351.9%20774.5,357.0%20C%20770.1,362.2%20765.4,367.1%20760.9,372.1%20C%20756.3,377.1%20751.6,382.0%20747.1,387.0%20C%20742.6,391.9%20738.1,396.8%20733.7,401.8%20C%20729.2,406.7%20724.8,411.6%20720.4,416.5%20C%20716.0,421.3%20711.5,426.2%20707.0,431.1%20C%20702.6,435.9%20698.0,440.7%20693.4,445.5%20C%20688.8,450.4%20684.2,455.1%20679.5,460.0%20C%20674.9,464.8%20670.2,469.6%20665.6,474.5%20C%20661.0,479.4%20656.4,484.4%20651.8,489.4%20C%20647.3,494.3%20642.8,499.4%20638.2,504.5%20C%20633.7,509.5%20629.2,514.6%20624.6,519.6%20C%20619.9,524.6%20615.3,529.6%20610.5,534.3%20C%20605.6,539.1%20600.8,544.1%20595.5,548.2%20C%20590.3,552.4%20585.0,556.8%20579.0,559.0%20C%20573.0,561.2%20566.1,562.0%20559.7,561.2%20C%20553.3,560.4%20546.3,557.5%20540.6,554.3%20C%20535.0,551.0%20530.5,546.3%20525.7,541.6%20C%20520.8,536.9%20516.3,530.8%20511.8,526.2%20C%20507.3,521.5%20502.7,513.7%20498.4,513.6%20C%20494.1,513.5%20487.9,521.1%20485.8,525.6%20C%20483.7,530.1%20483.2,535.6%20485.7,540.6%20C%20488.2,545.5%20495.8,550.5%20500.7,555.3%20C%20505.6,560.0%20510.0,565.0%20515.1,569.2%20C%20520.3,573.3%20525.8,577.2%20531.6,580.3%20C%20537.5,583.4%20543.8,585.9%20550.1,587.5%20C%20556.4,589.1%20563.0,590.0%20569.3,589.8%20C%20575.7,589.7%20582.2,588.4%20588.3,586.5%20C%20594.5,584.6%20600.5,581.6%20606.2,578.3%20C%20611.9,575.0%20617.4,570.9%20622.5,566.7%20C%20627.5,562.4%20631.9,557.6%20636.6,553.0%20C%20641.2,548.4%20645.5,542.8%20650.6,539.0%20C%20655.6,535.2%20662.9,528.8%20666.9,530.2%20C%20670.8,531.6%20670.9,541.9%20674.2,547.4%20C%20677.5,552.9%20682.4,557.8%20686.6,563.0%20C%20690.8,568.2%20695.2,573.4%20699.5,578.6%20C%20703.8,583.7%20708.2,588.9%20712.5,594.1%20C%20716.8,599.2%20721.2,604.4%20725.4,609.6%20C%20729.6,614.8%20733.8,620.0%20737.9,625.2%20C%20742.1,630.4%20746.2,635.6%20750.3,640.9%20C%20754.4,646.1%20758.5,651.3%20762.6,656.5%20C%20766.7,661.8%20770.8,667.0%20774.9,672.2%20C%20779.0,677.5%20783.2,682.7%20787.4,687.9%20C%20791.6,693.1%20795.8,698.3%20800.1,703.5%20C%20804.4,708.7%20808.8,713.9%20813.2,719.1%20C%20817.7,724.2%20822.2,729.4%20826.9,734.4%20C%20831.6,739.3%20836.3,744.2%20841.3,748.8%20C%20846.2,753.4%20851.2,757.8%20856.5,761.8%20C%20861.7,765.8%20867.1,769.5%20872.7,772.7%20C%20878.3,775.9%20884.1,778.8%20890.0,781.2%20C%20896.0,783.7%20902.1,785.8%20908.4,787.5%20C%20914.7,789.2%20921.2,790.6%20927.8,791.6%20C%20934.4,792.6%20941.3,793.2%20948.0,793.3%20C%20954.7,793.3%20961.5,793.0%20968.0,791.9%20C%20974.5,790.9%20981.0,789.3%20987.0,786.9%20C%20993.0,784.5%20998.9,781.4%201004.0,777.5%20C%201009.2,773.6%201014.4,768.8%201017.9,763.4%20C%201021.4,758.0%201024.2,751.6%201024.9,745.3%20C%201025.7,739.1%201024.6,731.6%201022.5,725.6%20C%201020.4,719.7%201016.9,713.6%201012.3,709.7%20C%201007.7,705.7%201000.5,702.7%20994.9,701.8%20C%20989.2,701.0%20978.0,703.7%20978.4,704.7%20C%20978.8,705.8%20992.2,705.0%20997.2,708.2%20C%201002.1,711.5%201006.3,718.5%201007.9,724.4%20C%201009.6,730.3%201008.9,737.5%201007.1,743.5%20C%201005.3,749.5%201001.3,755.5%20997.0,760.3%20C%20992.6,765.1%20986.7,769.5%20980.8,772.2%20C%20975.0,775.0%20968.2,776.5%20961.8,776.9%20C%20955.4,777.2%20948.6,776.1%20942.4,774.4%20C%20936.2,772.8%20930.1,770.0%20924.4,767.0%20C%20918.7,763.9%20913.2,760.1%20908.1,756.1%20C%20902.9,752.2%20898.0,747.7%20893.3,743.1%20C%20888.6,738.4%20884.1,733.4%20879.7,728.4%20C%20875.3,723.4%20871.0,718.2%20866.8,713.0%20C%20862.5,707.9%20858.3,702.7%20854.1,697.5%20C%20849.9,692.3%20845.7,687.1%20841.5,681.9%20C%20837.3,676.7%20833.2,671.6%20829.0,666.4%20C%20824.8,661.2%20820.6,656.0%20816.3,650.8%20C%20812.1,645.6%20807.8,640.4%20803.6,635.2%20C%20799.3,630.0%20795.0,624.8%20790.7,619.7%20C%20786.4,614.5%20782.1,609.3%20777.9,604.2%20C%20773.6,599.0%20769.3,593.9%20765.1,588.8%20C%20760.8,583.6%20756.5,578.5%20752.2,573.5%20C%20748.0,568.4%20743.7,563.3%20739.3,558.2%20C%20735.0,553.2%20730.6,548.1%20726.2,543.1%20C%20721.8,538.0%20717.2,532.9%20712.8,527.9%20C%20708.4,522.9%20704.1,517.1%20699.8,513.0%20C%20695.4,509.0%20686.8,507.5%20686.8,503.4%20C%20686.9,499.2%20695.4,493.1%20700.0,488.1%20C%20704.5,483.1%20709.5,478.3%20714.2,473.4%20C%20719.0,468.5%20723.7,463.6%20728.4,458.7%20C%20733.1,453.8%20737.7,448.9%20742.4,444.0%20C%20747.1,439.1%20751.7,434.2%20756.3,429.3%20C%20760.9,424.3%20765.5,419.4%20770.1,414.5%20C%20774.7,409.6%20779.3,404.7%20783.9,399.8%20C%20788.6,394.9%20793.2,389.9%20797.9,385.0%20C%20802.6,380.1%20807.4,375.1%20812.2,370.2%20C%20816.9,365.3%20821.8,360.3%20826.6,355.4%20C%20831.4,350.5%20836.2,345.6%20841.0,340.7%20C%20845.7,335.9%20850.4,330.9%20855.3,326.2%20C%20860.1,321.5%20864.8,316.6%20869.9,312.3%20C%20875.0,307.9%20883.9,303.2%20886.0,300.1%20C%20888.1,297.1%20886.6,295.2%20882.5,294.2%20C%20878.4,293.1%20868.3,293.8%20861.5,293.6%20C%20854.7,293.5%20848.4,293.3%20841.6,293.2%20C%20834.9,293.1%20827.9,292.8%20821.0,293.0%20Z%22/%3E%3Cpath%20d=%22M%20564.1,464.5%20C%20563.2,464.5%20562.2,465.0%20561.3,465.7%20C%20560.4,466.3%20559.5,467.3%20558.6,468.2%20C%20557.8,469.0%20557.1,469.9%20556.3,470.8%20C%20555.6,471.6%20554.9,472.5%20554.1,473.3%20C%20553.4,474.1%20552.6,475.0%20551.9,475.8%20C%20551.1,476.7%20550.3,477.5%20549.5,478.4%20C%20548.7,479.2%20547.9,480.1%20547.1,480.9%20C%20546.3,481.7%20545.4,482.6%20544.6,483.4%20C%20543.8,484.2%20543.0,485.0%20542.2,485.8%20C%20541.4,486.7%20540.6,487.5%20539.8,488.3%20C%20539.0,489.1%20538.2,489.9%20537.3,490.8%20C%20536.5,491.6%20535.6,492.4%20534.8,493.3%20C%20534.0,494.2%20533.0,495.0%20532.4,495.9%20C%20531.8,496.8%20531.2,497.7%20531.0,498.6%20C%20530.9,499.6%20531.0,500.5%20531.3,501.4%20C%20531.6,502.3%20532.2,503.2%20532.8,504.0%20C%20533.4,504.9%20534.3,505.7%20535.1,506.5%20C%20535.9,507.3%20536.9,508.1%20537.8,508.9%20C%20538.7,509.7%20539.7,510.5%20540.6,511.4%20C%20541.5,512.2%20542.3,513.0%20543.1,513.8%20C%20544.0,514.7%20544.7,515.5%20545.5,516.4%20C%20546.2,517.2%20546.9,518.1%20547.7,518.9%20C%20548.4,519.8%20549.2,520.6%20549.9,521.4%20C%20550.7,522.3%20551.5,523.1%20552.3,523.9%20C%20553.1,524.7%20553.9,525.5%20554.7,526.4%20C%20555.4,527.2%20556.2,528.0%20557.0,528.9%20C%20557.8,529.8%20558.5,530.7%20559.3,531.6%20C%20560.0,532.6%20560.7,533.6%20561.5,534.4%20C%20562.3,535.2%20563.0,536.0%20563.9,536.5%20C%20564.7,537.0%20565.6,537.3%20566.4,537.2%20C%20567.3,537.1%20568.1,536.5%20568.9,535.9%20C%20569.8,535.2%20570.5,534.2%20571.3,533.3%20C%20572.0,532.5%20572.7,531.6%20573.4,530.8%20C%20574.1,530.0%20574.8,529.2%20575.5,528.3%20C%20576.2,527.5%20576.9,526.7%20577.7,525.9%20C%20578.4,525.1%20579.2,524.3%20580.0,523.5%20C%20580.7,522.7%20581.5,521.9%20582.2,521.0%20C%20583.0,520.2%20583.7,519.4%20584.5,518.6%20C%20585.2,517.7%20585.9,516.9%20586.6,516.1%20C%20587.3,515.2%20588.0,514.4%20588.7,513.5%20C%20589.4,512.7%20590.2,511.9%20590.9,511.0%20C%20591.6,510.2%20592.4,509.4%20593.2,508.5%20C%20593.9,507.7%20594.8,506.8%20595.5,506.0%20C%20596.3,505.2%20597.3,504.4%20597.9,503.6%20C%20598.4,502.7%20598.8,501.9%20598.7,501.1%20C%20598.6,500.3%20597.8,499.5%20597.1,498.7%20C%20596.4,497.9%20595.4,497.2%20594.5,496.4%20C%20593.7,495.6%20592.9,494.7%20592.1,493.9%20C%20591.3,493.1%20590.5,492.2%20589.7,491.4%20C%20588.9,490.5%20588.2,489.7%20587.4,488.8%20C%20586.7,488.0%20585.9,487.1%20585.1,486.3%20C%20584.4,485.4%20583.6,484.6%20582.8,483.8%20C%20582.0,482.9%20581.2,482.1%20580.4,481.3%20C%20579.6,480.4%20578.7,479.6%20577.9,478.8%20C%20577.1,478.0%20576.3,477.1%20575.5,476.3%20C%20574.7,475.5%20573.9,474.6%20573.2,473.8%20C%20572.5,472.9%20571.8,472.1%20571.1,471.2%20C%20570.4,470.3%20569.7,469.4%20569.0,468.5%20C%20568.3,467.6%20567.5,466.5%20566.7,465.9%20C%20565.9,465.2%20565.0,464.5%20564.1,464.5%20Z%22/%3E%0A%3C/g%3E%3C/svg%3E") center / contain no-repeat;
+}
+/* --- Wordmark --- */
+.ek-word{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight:800;
+  letter-spacing:.32em;
+  font-size:15px;
+  background:linear-gradient(180deg,#d9b968,#8a6a26);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  white-space:nowrap;
+}
+.ek-brand{ display:flex; flex-direction:column; align-items:center; gap:2px; }
+
+.a-logo{ --sz:48px; position:relative; width:var(--sz); height:var(--sz); }
+.a-logo i,.a-logo::before,.a-logo::after{ position:absolute; }
+.a-logo::before{ content:""; inset:10% 11% 12%; border-radius:28%; background:linear-gradient(180deg,rgba(99,189,242,.38),rgba(99,189,242,.20)); }
+.a-logo .g{ inset:0; background:linear-gradient(180deg,rgba(126,186,238,.50),rgba(126,186,238,.30)); clip-path:polygon(44% 6%,47% 4%,53% 4%,56% 6%,86% 94%,70% 97%,50% 62%,30% 97%,14% 94%); }
+.a-logo .g::before{ content:""; position:absolute; left:21%; top:22%; width:58%; height:64%; clip-path:polygon(2% 100%,39% 7%,43% 2%,48% 0,56% 0,61% 2%,65% 7%,98% 100%,72% 100%,50% 33%,28% 100%); background:radial-gradient(60% 45% at 50% 0%,rgba(255,255,255,.30),transparent 60%),linear-gradient(100deg,transparent 0 54%,rgba(8,80,150,.38) 54%),linear-gradient(180deg,#58bcf6,#2196e8 55%,#0f85dc); filter:drop-shadow(0 1px 2px rgba(20,110,180,.35)); }
+.a-logo::after{ content:""; left:43.5%; top:61%; width:13%; height:6%; border-radius:999px; background:#4fb2ef; }
+body { font-family:'Inter',sans-serif; background-color:#f8fafc; }
+.day-present { background-color:#00bfff; color:#fff; }
+.day-absent { background-color:#ff0066; color:#fff; }
+.day-partial { background:linear-gradient(180deg,#00bfff 50%,#ff0066 50%); color:#fff; }
+.day-holiday { background-color:#f1f5f9; border:2px dashed #94a3b8!important; color:#64748b; }
+.day-future { background-color:#fff; border:1px solid #f1f5f9; color:#cbd5e1; }
+.donut-chart { transform:rotate(-90deg); }
+::-webkit-scrollbar { width:6px; height:6px; }
+::-webkit-scrollbar-thumb { background:#cbd5e1; border-radius:4px; }
+.loading-spinner { border:3px solid #e2e8f0; border-top:3px solid #00bfff; border-radius:50%; width:18px; height:18px; animation:spin .7s linear infinite; display:inline-block; vertical-align:middle; }
+@keyframes spin { 0%{transform:rotate(0)} 100%{transform:rotate(360deg)} }
+.shake { animation: shake .4s; }
+@keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
+  </style>
+</head>
+<body class="text-slate-800 p-3 sm:p-6 min-h-screen">
+
+  <div id="toast-box" class="fixed top-4 right-4 z-[100] space-y-2 hidden max-w-xs"></div>
+
+  <div class="max-w-7xl mx-auto space-y-6">
+
+    <header class="flex justify-between items-center bg-white p-4 sm:p-6 rounded-2xl shadow-sm border border-slate-100">
+      <div class="flex items-center space-x-3">
+        <div class="w-12 h-12 flex items-center justify-center shrink-0">
+          <div class="a-logo" style="--sz:44px;"><i class="g"></i></div>
+        </div>
+        <div>
+          <h1 class="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">Attendly</h1>
+          <p class="text-xs sm:text-sm text-slate-400 font-medium">Smart Academic Attendance Analytics</p>
+        </div>
+        <div class="hidden sm:flex ml-4 pl-4 border-l border-slate-200 items-center">
+          <div class="ek-brand">
+            <div class="ekaksh-logo" style="width:58px;"></div>
+            <span class="ek-word">EKΛKSH</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center space-x-2">
+        <button id="admin-badge" onclick="openModal('access-requests-modal')" class="hidden bg-purple-50 text-purple-700 hover:bg-purple-100 border border-purple-200 font-bold px-3 py-2 rounded-xl text-xs transition-all shadow-sm">
+          🔔 Requests (<span id="pending-count">0</span>)
+        </button>
+        <button onclick="openModal('settings-modal')" class="flex items-center space-x-2 bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-700 font-bold px-4 py-2 rounded-xl text-sm transition-all shadow-sm">⚙️ Settings</button>
+      </div>
+    </header>
+
+    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+      <div id="phase-guest" class="hidden">
+        <div class="text-center mb-5">
+          <div class="ekaksh-logo mx-auto mb-2" style="width:90px;"></div>
+          <h2 class="text-xl font-black text-slate-900">Let's track your attendance!</h2>
+          <p class="text-sm text-slate-400 font-medium mt-1">Every class counts. Enter your name to get started 🚀</p>
+        </div>
+        <div class="max-w-md mx-auto space-y-2">
+          <input type="text" id="user-name-input" placeholder="Your full name..." onkeypress="if(event.key==='Enter')document.getElementById('user-college-input').focus()" class="border border-slate-200 rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-800 w-full focus:outline-none focus:ring-2 focus:ring-[#00bfff]/40"/>
+          <div class="flex gap-2">
+            <input type="text" id="user-college-input" placeholder="Your college name..." onkeypress="if(event.key==='Enter')handleAuthAction()" class="border border-slate-200 rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-800 w-full focus:outline-none focus:ring-2 focus:ring-[#00bfff]/40"/>
+            <button onclick="handleAuthAction()" id="auth-action-btn" class="bg-[#00bfff] hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm shadow-md whitespace-nowrap transition-colors shrink-0">Let's Go 🚀</button>
+          </div>
+        </div>
+        <p id="guest-error" class="hidden text-center text-xs font-bold text-rose-500 mt-3">✍️ Oops! Please enter your name first.</p>
+        <p id="guest-error-college" class="hidden text-center text-xs font-bold text-rose-500 mt-1">🏫 Please enter your college name.</p>
+      </div>
+
+      <div id="phase-loading" class="hidden text-center py-4">
+        <span class="loading-spinner"></span>
+        <p class="text-sm font-bold text-slate-500 mt-2">Working on it... almost there! ⚡</p>
+      </div>
+
+     <div id="phase-pending" class="hidden text-center">
+        <div class="text-3xl mb-1">⏳</div>
+        <h2 class="text-lg font-black text-slate-900">Please wait, <span id="pending-name-1" class="text-[#00bfff]"></span>!</h2>
+        <p class="text-sm text-slate-500 font-medium mt-1">Your request is with the admin. You're in as soon as it's approved 🤞</p>
+        <div class="flex items-center justify-center gap-4 mt-3">
+          <button onclick="checkStatusNow()" class="text-xs font-bold text-[#00bfff] underline">Check status now</button>
+          <span class="text-slate-300">|</span>
+          <button onclick="logoutUser()" class="text-xs font-bold text-slate-500 underline hover:text-slate-700">✏️ Misspelled? Switch User</button>
+        </div>
+      </div>
+
+      <div id="phase-rejected" class="hidden text-center">
+        <div class="text-3xl mb-1">😕</div>
+        <h2 class="text-lg font-black text-rose-600">Your request was rejected</h2>
+        <p class="text-sm text-slate-500 mt-1">Admin's remark: <span id="rejection-remark" class="font-bold text-rose-500 italic"></span></p>
+        <button onclick="logoutUser()" class="mt-3 bg-slate-800 hover:bg-slate-900 text-white font-bold px-5 py-2 rounded-xl text-xs">Try again with correct name</button>
+      </div>
+
+      <div id="phase-approved" class="hidden flex flex-col sm:flex-row justify-between items-center gap-3">
+        <div class="text-center sm:text-left">
+          <h2 class="text-lg font-black text-slate-900">👋 Welcome back, <span id="welcome-name" class="text-[#00bfff]"></span>!</h2>
+          <p class="text-xs text-slate-400 font-medium" id="welcome-sub"></p>
+        </div>
+        <button onclick="logoutUser()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold px-4 py-2 rounded-xl text-xs transition-colors">🔁 Switch User</button>
+      </div>
+
+      <div id="phase-error" class="hidden text-center">
+        <div class="text-2xl">⚠️</div>
+        <p class="text-sm font-bold text-rose-500 mt-1">Couldn't connect to the database.</p>
+        <p class="text-xs text-slate-400 mt-1" id="error-detail">Contact admin to set up the Apps Script URL.</p>
+        <button onclick="retryAuth()" class="mt-2 text-xs font-bold text-[#00bfff] underline">Retry</button>
+      </div>
+    </div>
+
+    <div id="tracker-section" class="space-y-6 hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        <div id="calendar-col" class="lg:col-span-5 space-y-6">
+          <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100">
+            <div class="flex justify-between items-center mb-5">
+              <div class="flex items-center space-x-1">
+                <button onclick="changeMonth(-1)" class="p-1.5 border rounded-lg hover:bg-slate-50 text-slate-600 font-bold">‹</button>
+                <h2 id="calendar-title" class="text-base font-bold text-slate-900 px-2 min-w-[130px] text-center">Month Year</h2>
+                <button onclick="changeMonth(1)" class="p-1.5 border rounded-lg hover:bg-slate-50 text-slate-600 font-bold">›</button>
+              </div>
+              <button onclick="goToToday()" class="text-xs bg-blue-50 text-[#00bfff] font-bold px-3 py-1.5 rounded-lg hover:bg-blue-100">Today</button>
+            </div>
+            <div class="grid grid-cols-7 text-center text-xs font-bold text-slate-400 mb-3">
+              <span class="text-rose-500">Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+            </div>
+            <div id="calendar-grid" class="grid grid-cols-7 gap-2"></div>
+            <div class="mt-5 pt-4 border-t border-slate-100 flex flex-wrap gap-3 text-xs font-semibold text-slate-600 justify-center">
+              <div class="flex items-center space-x-1.5"><div class="w-3.5 h-3.5 rounded day-present"></div><span>Present</span></div>
+              <div class="flex items-center space-x-1.5"><div class="w-3.5 h-3.5 rounded day-partial"></div><span>Partial</span></div>
+              <div class="flex items-center space-x-1.5"><div class="w-3.5 h-3.5 rounded day-absent"></div><span>Absent</span></div>
+              <div class="flex items-center space-x-1.5"><div class="w-3.5 h-3.5 rounded day-holiday"></div><span>Holiday</span></div>
+              <div class="flex items-center space-x-1.5"><div class="w-3.5 h-3.5 rounded day-future"></div><span>Future</span></div>
+            </div>
+          </div>
+        </div>
+        <div id="analytics-col" class="lg:col-span-7 space-y-6">
+          <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100">
+            <div class="flex justify-between items-center mb-4 pb-2 border-b border-slate-50">
+              <h3 class="text-base font-bold text-slate-900">Monthly Overview <span id="monthly-sub-title" class="text-xs font-semibold text-[#00bfff] ml-1"></span></h3>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-sm border-collapse">
+                <thead><tr class="border-b border-slate-100 text-xs text-slate-400 font-bold uppercase"><th class="pb-3">Subject</th><th class="pb-3 text-center">Lecture</th><th class="pb-3 text-center">Lab</th><th class="pb-3 text-center">Tutorial</th><th class="pb-3 text-center">Total</th><th class="pb-3 text-right">%</th></tr></thead>
+                <tbody id="monthly-tbody" class="divide-y divide-slate-50"></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100">
+            <div class="flex justify-between items-center mb-4 pb-2 border-b border-slate-50">
+              <h3 class="text-base font-bold text-slate-900">Semester Overview <span id="semester-sub-title" class="text-xs font-semibold text-slate-400 ml-1"></span></h3>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-sm border-collapse">
+                <thead><tr class="border-b border-slate-100 text-xs text-slate-400 font-bold uppercase"><th class="pb-3">Subject</th><th class="pb-3 text-center">Lecture</th><th class="pb-3 text-center">Lab</th><th class="pb-3 text-center">Tutorial</th><th class="pb-3 text-center">Total</th><th class="pb-3 text-right">%</th></tr></thead>
+                <tbody id="semester-tbody" class="divide-y divide-slate-50"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="analytics-bottom" class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+        <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+          <div>
+            <h3 class="text-base font-bold text-slate-900">Attendance Trend</h3>
+            <p class="text-xs text-slate-400 mt-0.5">Click any bar to see that month's full breakdown 📊</p>
+          </div>
+          <div id="trend-bar-chart" class="flex items-end justify-around h-44 pt-6 px-2 border-b border-slate-100 mt-4"></div>
+        </div>
+        <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+          <h3 class="text-base font-bold text-slate-900 mb-4">Overall Semester Progress</h3>
+          <div class="flex flex-col sm:flex-row items-center justify-around gap-6">
+            <div class="relative w-36 h-36 flex items-center justify-center">
+              <svg class="w-full h-full donut-chart" viewBox="0 0 36 36">
+                <path class="text-slate-100" stroke-width="3.8" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                <path id="donut-fill" class="text-[#00bfff] transition-all duration-500 ease-out" stroke-dasharray="0,100" stroke-width="3.8" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+              </svg>
+              <div class="absolute flex flex-col items-center justify-center text-center">
+                <span id="overall-pct-text" class="text-xl font-black text-slate-900">0.0%</span>
+                <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Overall</span>
+              </div>
+            </div>
+            <div class="space-y-3 w-full max-w-xs">
+              <div class="bg-blue-50/60 p-3 rounded-xl flex items-center justify-between border border-blue-100">
+                <div class="flex items-center space-x-2"><span class="p-1.5 bg-[#00bfff] text-white rounded-lg text-xs">📘</span><span class="text-xs font-semibold text-slate-600">Total Conducted</span></div>
+                <span id="stat-conducted" class="text-lg font-black text-slate-900">0</span>
+              </div>
+              <div class="bg-emerald-50/60 p-3 rounded-xl flex items-center justify-between border border-emerald-100">
+                <div class="flex items-center space-x-2"><span class="p-1.5 bg-emerald-500 text-white rounded-lg text-xs">✅</span><span class="text-xs font-semibold text-slate-600">Total Attended</span></div>
+                <span id="stat-attended" class="text-lg font-black text-emerald-600">0</span>
+              </div>
+              <div class="bg-purple-50/60 p-3 rounded-xl flex items-center justify-between border border-purple-100">
+                <div class="flex items-center space-x-2"><span class="p-1.5 bg-purple-500 text-white rounded-lg text-xs">%</span><span class="text-xs font-semibold text-slate-600">Attendance %</span></div>
+                <span id="stat-pct" class="text-lg font-black text-purple-600">0.0%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Access Requests (Admin) -->
+  <div id="access-requests-modal" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm hidden items-center justify-center p-4 z-50">
+    <div class="bg-white w-full max-w-lg rounded-2xl p-6 shadow-2xl space-y-5">
+      <div class="flex justify-between items-center border-b pb-3">
+        <h3 class="font-extrabold text-lg text-slate-900">Pending Access Requests</h3>
+        <button onclick="closeModal('access-requests-modal')" class="text-slate-400 hover:text-slate-600 font-bold text-lg">✕</button>
+      </div>
+      <div id="access-requests-list" class="space-y-3 max-h-80 overflow-y-auto pr-1"></div>
+      <div class="flex justify-end pt-2"><button onclick="closeModal('access-requests-modal')" class="bg-slate-100 text-slate-700 font-bold px-4 py-2 rounded-xl text-sm">Close</button></div>
+    </div>
+  </div>
+
+  <!-- MODAL: Day Details -->
+  <div id="day-modal" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm hidden items-center justify-center p-4 z-50">
+    <div class="bg-white w-full max-w-md rounded-2xl p-6 shadow-2xl space-y-5">
+      <div class="flex justify-between items-center border-b pb-3">
+        <div><h3 id="modal-date-title" class="font-extrabold text-lg text-slate-900">Date</h3><p id="modal-day-name" class="text-xs text-slate-400 font-medium"></p></div>
+        <button onclick="closeModal('day-modal')" class="text-slate-400 hover:text-slate-600 font-bold text-lg">✕</button>
+      </div>
+      <div class="flex items-center justify-between bg-slate-50 p-3 rounded-xl border border-slate-100">
+        <label class="flex items-center space-x-2 text-xs font-bold text-slate-700 cursor-pointer"><input type="checkbox" id="toggle-holiday" onchange="toggleHoliday(this.checked)" class="rounded text-[#00bfff]"/><span>Mark as Holiday</span></label>
+        <label class="flex items-center space-x-2 text-xs font-bold text-slate-700 cursor-pointer"><input type="checkbox" id="toggle-full-absent" onchange="toggleFullAbsent(this.checked)" class="rounded text-[#ff0066]"/><span>Full Day Absent</span></label>
+      </div>
+      <div id="modal-schedule-list" class="space-y-3 max-h-60 overflow-y-auto pr-1"></div>
+      <div class="flex justify-end pt-2"><button onclick="saveAndSyncState();closeModal('day-modal');" class="bg-[#00bfff] text-white font-bold px-5 py-2.5 rounded-xl text-sm shadow-md">Save</button></div>
+    </div>
+  </div>
+
+  <!-- MODAL: Subject Breakdown -->
+  <div id="subject-modal" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm hidden items-center justify-center p-4 z-50">
+    <div class="bg-white w-full max-w-sm rounded-2xl p-6 shadow-2xl space-y-4">
+      <div class="flex justify-between items-center border-b pb-3">
+        <h3 id="subject-modal-title" class="font-extrabold text-lg text-slate-900">Subject</h3>
+        <button onclick="closeModal('subject-modal')" class="text-slate-400 hover:text-slate-600 font-bold text-lg">✕</button>
+      </div>
+      <div id="subject-modal-content" class="space-y-3 text-sm"></div>
+      <div class="flex justify-end pt-2"><button onclick="closeModal('subject-modal')" class="bg-slate-100 text-slate-700 font-bold px-4 py-2 rounded-xl text-sm">Close</button></div>
+    </div>
+  </div>
+
+  <!-- MODAL: Month Summary -->
+  <div id="month-modal" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm hidden items-center justify-center p-4 z-50">
+    <div class="bg-white w-full max-w-md rounded-2xl p-6 shadow-2xl space-y-4 max-h-[85vh] overflow-y-auto">
+      <div class="flex justify-between items-center border-b pb-3">
+        <h3 id="month-modal-title" class="font-extrabold text-lg text-slate-900">Month</h3>
+        <button onclick="closeModal('month-modal')" class="text-slate-400 hover:text-slate-600 font-bold text-lg">✕</button>
+      </div>
+      <div id="month-modal-content" class="space-y-3"></div>
+      <div class="flex justify-between pt-2">
+        <button onclick="jumpToMonthFromModal()" class="bg-blue-50 text-[#00bfff] font-bold px-4 py-2 rounded-xl text-xs">📅 Open in Calendar</button>
+        <button onclick="closeModal('month-modal')" class="bg-slate-100 text-slate-700 font-bold px-4 py-2 rounded-xl text-sm">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Settings -->
+  <div id="settings-modal" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm hidden items-center justify-center p-4 z-50">
+    <div class="bg-white w-full max-w-lg rounded-2xl p-6 shadow-2xl space-y-5 max-h-[90vh] overflow-y-auto">
+      <div class="flex justify-between items-center border-b pb-3">
+        <h3 class="font-extrabold text-lg text-slate-900">Settings</h3>
+        <button onclick="closeModal('settings-modal')" class="text-slate-400 hover:text-slate-600 font-bold text-lg">✕</button>
+      </div>
+      <!-- URL field: ONLY visible to Admin (hidden during setup and for users) -->
+      <div id="api-url-section" class="hidden">
+        <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Apps Script Web App URL</label>
+        <input type="text" id="input-api-url" placeholder="https://script.google.com/macros/s/.../exec" class="w-full border rounded-xl p-2.5 text-xs font-semibold"/>
+      </div>
+      <div>
+        <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Semester Start Date</label>
+        <input type="date" id="input-sem-start" class="w-full border rounded-xl p-2.5 text-sm font-semibold"/>
+      </div>
+      <div class="border-t pt-4">
+        <label class="block text-xs font-bold text-slate-500 uppercase mb-2">Add Timetable Entry</label>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+          <select id="input-day-select" class="border rounded-xl p-2 text-xs font-semibold"><option value="1">Monday</option><option value="2">Tuesday</option><option value="3">Wednesday</option><option value="4">Thursday</option><option value="5">Friday</option><option value="6">Saturday</option><option value="0">Sunday</option></select>
+          <input type="text" id="input-sub-name" placeholder="Subject Name" onkeypress="if(event.key==='Enter')addScheduleEntry()" class="border rounded-xl p-2 text-xs font-semibold"/>
+          <select id="input-type-select" class="border rounded-xl p-2 text-xs font-semibold"><option value="Lecture">Lecture</option><option value="Lab">Lab</option><option value="Tutorial">Tutorial</option></select>
+        </div>
+        <p id="sub-error" class="hidden text-xs font-bold text-rose-500 mt-2">✍️ Please enter a subject name.</p>
+        <button onclick="addScheduleEntry()" class="mt-2.5 w-full bg-slate-800 hover:bg-slate-900 text-white font-bold py-2 rounded-xl text-xs">+ Add Class Entry</button>
+      </div>
+      <div class="space-y-2">
+        <label class="block text-xs font-bold text-slate-500 uppercase">Current Timetable</label>
+        <div id="timetable-list" class="space-y-1.5 max-h-40 overflow-y-auto pr-1 border p-2 rounded-xl bg-slate-50 text-xs"></div>
+      </div>
+      <div class="pt-2 flex justify-between items-center border-t">
+        <button onclick="resetAllData()" class="text-rose-600 border border-rose-200 hover:bg-rose-50 font-bold px-3 py-2 rounded-xl text-xs">Reset My Data</button>
+        <button onclick="saveSettings()" class="bg-[#00bfff] text-white font-bold px-5 py-2 rounded-xl text-sm shadow-md">Save Changes</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ===== CONFIG: Default Apps Script URL =====
+    // Replace this with your actual Apps Script Web App URL
+    const DEFAULT_API_URL = 'https://script.google.com/macros/s/AKfycbzHpO1DVpQttLcrXhcJQykBfeKPa0eg9oYKXd2tJAG7oU4UEm-PPrHk1ToDCtd478avBw/exec';
+
+    let appState = { apiUrl:'', semStartDate:'', timetable:{}, overrides:{} };
+    let currentUser = { name:'', college:'', role:'Guest', status:'Unverified', remark:'' };
+    let pendingAccessRequests = [];
+    let activeMonthDate = new Date();
+    let selectedDateStr = null;
+    let monthModalTarget = new Date();
+    let busy = false;
+
+    // ===== NAME NORMALIZATION: Case-insensitive + Title Case display =====
+    function toTitleCase(str) {
+      return str.replace(/\w\S*/g, function(txt){
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+      });
+    }
+    function normalizeName(name) {
+      return name.trim().replace(/\s+/g, ' '); // collapse multiple spaces
+    }
+    function getDisplayName(rawName) {
+      return toTitleCase(normalizeName(rawName)); // "qwen smith" → "Qwen Smith"
+    }
+
+    // ===== PER-USER STORAGE (case-insensitive key) =====
+    function userDataKey(){ 
+      return 'attendly_data_' + (currentUser.name || 'guest').toLowerCase().replace(/\s+/g, '_'); 
+    }
+
+    function loadUserData(){
+      appState.semStartDate=''; appState.timetable={}; appState.overrides={};
+      if(!currentUser.name) return;
+      const s = localStorage.getItem(userDataKey());
+      if(s){ try{ const p=JSON.parse(s); appState.semStartDate=p.semStartDate||''; appState.timetable=p.timetable||{}; appState.overrides=p.overrides||{}; }catch(e){} }
+      if(!appState.semStartDate){ appState.semStartDate=getTodayStr(); saveUserData(); }
+      document.getElementById('input-sem-start').value = appState.semStartDate;
+    }
+
+    function saveUserData(){
+      if(!currentUser.name) return;
+      localStorage.setItem(userDataKey(), JSON.stringify({ semStartDate:appState.semStartDate, timetable:appState.timetable, overrides:appState.overrides }));
+    }
+
+    window.onload = function() {
+      // Load URL: try localStorage first, then default (works on mobile too)
+      appState.apiUrl = localStorage.getItem('attendly_api_url') || DEFAULT_API_URL;
+      document.getElementById('input-api-url').value = appState.apiUrl;
+
+      const savedName = localStorage.getItem('attendly_user_name');
+      if (savedName) {
+        currentUser.name = getDisplayName(savedName); // normalize on load
+        loadUserData();
+        setPhase('loading');
+        bootstrap(false);
+      } else {
+        document.getElementById('input-sem-start').value = getTodayStr();
+        setPhase('guest');
+        renderApp();
+      }
+      setInterval(() => { if (currentUser.name && !busy) bootstrap(false, true); }, 25000);
+    };
+
+    async function apiRequest(action, payload={}) {
+      if (!appState.apiUrl || appState.apiUrl === 'PASTE_YOUR_APPS_SCRIPT_URL_HERE') return null;
+      try {
+        const ctrl = new AbortController();
+        const timer = setTimeout(() => ctrl.abort(), 25000);
+        const res = await fetch(appState.apiUrl, {
+          method:'POST', headers:{'Content-Type':'text/plain'},
+          body: JSON.stringify({action, name: currentUser.name, college: currentUser.college || '', ...payload}), // send Title Case name
+          signal: ctrl.signal
+        });
+        clearTimeout(timer);
+        return await res.json();
+      } catch(e) { return null; }
+    }
+
+    async function bootstrap(requestAccess, silent) {
+      if (busy) return;
+      busy = true;
+      if (!silent) setPhase('loading');
+
+      const res = await apiRequest('bootstrap', { request: !!requestAccess });
+      busy = false;
+
+      if (!res || !res.success) {
+        if (!silent) {
+          setPhase('error');
+          if (!appState.apiUrl || appState.apiUrl === 'PASTE_YOUR_APPS_SCRIPT_URL_HERE') {
+            document.getElementById('error-detail').innerText = 'Database not configured. Contact admin.';
+          } else {
+            document.getElementById('error-detail').innerText = 'Admin: check the Apps Script URL in ⚙️ Settings.';
+          }
+        }
+        return;
+      }
+
+      currentUser.role = res.role || 'User';
+      currentUser.status = res.status;
+      currentUser.remark = res.remark || '';
+
+      if (res.requests) {
+        pendingAccessRequests = res.requests;
+        document.getElementById('pending-count').innerText = res.requests.length;
+        renderPendingRequestsList();
+      }
+      if (res.notifications && res.notifications.length) showToast(res.notifications);
+
+      if (res.status === 'Pending' || res.status === 'Approved') {
+        localStorage.setItem('attendly_user_name', currentUser.name);
+      }
+
+      updateAuthUI();
+      renderApp();
+    }
+
+    function retryAuth() { if (currentUser.name) bootstrap(false); else setPhase('guest'); }
+
+    function checkStatusNow() {
+      if (!appState.apiUrl || appState.apiUrl === 'PASTE_YOUR_APPS_SCRIPT_URL_HERE') {
+        alert('Database not configured. Please contact your admin.');
+        return;
+      }
+      bootstrap(false);
+    }
+
+    async function handleAuthAction() {
+      const nameInput = document.getElementById('user-name-input');
+      const collegeInput = document.getElementById('user-college-input');
+      const rawName = nameInput.value.trim();
+      const rawCollege = collegeInput.value.trim();
+
+      // Validate name
+      if (!rawName) {
+        document.getElementById('guest-error').classList.remove('hidden');
+        document.getElementById('guest-error-college').classList.add('hidden');
+        nameInput.classList.add('shake', 'border-rose-400');
+        setTimeout(() => nameInput.classList.remove('shake'), 500);
+        nameInput.focus();
+        return;
+      }
+      nameInput.classList.remove('border-rose-400');
+      document.getElementById('guest-error').classList.add('hidden');
+
+      // Validate college
+      if (!rawCollege) {
+        document.getElementById('guest-error-college').classList.remove('hidden');
+        collegeInput.classList.add('shake', 'border-rose-400');
+        setTimeout(() => collegeInput.classList.remove('shake'), 500);
+        collegeInput.focus();
+        return;
+      }
+      collegeInput.classList.remove('border-rose-400');
+      document.getElementById('guest-error-college').classList.add('hidden');
+
+      // Convert to Title Case
+      const displayName = getDisplayName(rawName);
+      const displayCollege = getDisplayName(rawCollege);
+      currentUser.name = displayName;
+      currentUser.college = displayCollege;
+      loadUserData();
+      await bootstrap(true);
+    }
+
+    function logoutUser() {
+      saveUserData();
+      localStorage.removeItem('attendly_user_name');
+      currentUser = { name:'', college:'', role:'Guest', status:'Unverified', remark:'' };
+      appState.semStartDate=''; appState.timetable={}; appState.overrides={};
+      pendingAccessRequests = [];
+      const input = document.getElementById('user-name-input');
+      document.getElementById('user-college-input').value = '';
+      document.getElementById('guest-error').classList.add('hidden');
+      input.classList.remove('border-rose-400');
+      updateAuthUI();
+      setPhase('guest');
+      renderApp();
+      input.focus();
+    }
+
+    function setPhase(phase) {
+      ['guest','loading','pending','rejected','approved','error'].forEach(p => {
+        document.getElementById('phase-' + p).classList.add('hidden');
+      });
+      document.getElementById('phase-' + phase).classList.remove('hidden');
+    }
+
+    function updateAuthUI() {
+      const tracker = document.getElementById('tracker-section');
+      const analyticsCol = document.getElementById('analytics-col');
+      const analyticsBottom = document.getElementById('analytics-bottom');
+      const calendarCol = document.getElementById('calendar-col');
+      const adminBadge = document.getElementById('admin-badge');
+
+      if (currentUser.status === 'Pending') {
+        setPhase('pending');
+        document.getElementById('pending-name-1').innerText = currentUser.name; // Title Case
+        tracker.classList.add('hidden');
+        adminBadge.classList.add('hidden');
+      } else if (currentUser.status === 'Rejected') {
+        setPhase('rejected');
+        document.getElementById('rejection-remark').innerText = '"' + (currentUser.remark || 'No reason given') + '"';
+        tracker.classList.add('hidden');
+        adminBadge.classList.add('hidden');
+      } else if (currentUser.role === 'Admin') {
+        setPhase('approved');
+        document.getElementById('welcome-name').innerText = currentUser.name; // Title Case
+        document.getElementById('welcome-sub').innerText = '🛡️ Administrator • Full access';
+        tracker.classList.remove('hidden');
+        analyticsCol.classList.remove('hidden');
+        analyticsBottom.classList.remove('hidden');
+        calendarCol.classList.remove('lg:col-span-12'); calendarCol.classList.add('lg:col-span-5');
+        adminBadge.classList.remove('hidden');
+      } else if (currentUser.status === 'Approved') {
+        setPhase('approved');
+        document.getElementById('welcome-name').innerText = currentUser.name;
+        document.getElementById('welcome-sub').innerText = '✅ ' + (currentUser.college || 'Access granted') + ' • Tap a day to mark attendance';
+        tracker.classList.remove('hidden');
+        analyticsCol.classList.remove('hidden');
+        analyticsBottom.classList.remove('hidden');
+        calendarCol.classList.remove('lg:col-span-12'); calendarCol.classList.add('lg:col-span-5');
+        adminBadge.classList.add('hidden');
+      } else {
+        setPhase('guest');
+        tracker.classList.add('hidden');
+        adminBadge.classList.add('hidden');
+      }
+
+      // URL field: ONLY visible to Admin (hidden during setup & for normal users)
+      const urlSection = document.getElementById('api-url-section');
+      if (currentUser.role === 'Admin') {
+        urlSection.classList.remove('hidden');
+      } else {
+        urlSection.classList.add('hidden');
+      }
+    }
+
+    function showToast(messages) {
+      const box = document.getElementById('toast-box');
+      box.innerHTML = '';
+      messages.forEach(m => {
+        const d = document.createElement('div');
+        d.className = 'bg-slate-900 text-white text-xs font-bold px-4 py-3 rounded-xl shadow-lg';
+        d.innerText = m;
+        box.appendChild(d);
+      });
+      box.classList.remove('hidden');
+      setTimeout(() => { box.classList.add('hidden'); }, 6000);
+    }
+
+    function renderPendingRequestsList() {
+      const list = document.getElementById('access-requests-list');
+      list.innerHTML = '';
+      if (!pendingAccessRequests.length) { list.innerHTML = `<p class="text-xs text-center text-slate-400 py-4">No pending requests 🎈</p>`; return; }
+      pendingAccessRequests.forEach(req => {
+        const safe = req.name.replace(/[^a-zA-Z0-9]/g,'-');
+        const item = document.createElement('div');
+        item.className = 'bg-slate-50 p-4 rounded-xl border border-slate-100 space-y-3';
+        item.innerHTML = `
+          <div class="flex justify-between items-center"><span class="font-bold text-sm">${req.name}</span><span class="text-[10px] text-slate-400">${req.date || ''}</span></div>
+          <p class="text-[11px] text-slate-500 font-medium">🏫 ${req.college || 'N/A'}</p>
+          <div class="flex gap-2">
+            <button onclick="approveUser('${req.name.replace(/'/g,"\\'")}')" class="flex-1 bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-1.5 rounded-lg text-xs">✅ Grant</button>
+            <button onclick="document.getElementById('rb-${safe}').classList.toggle('hidden')" class="flex-1 bg-rose-500 hover:bg-rose-600 text-white font-bold py-1.5 rounded-lg text-xs">❌ Reject</button>
+          </div>
+          <div id="rb-${safe}" class="hidden flex gap-2">
+            <input type="text" id="rm-${safe}" placeholder="Remark (e.g., invalid name)" class="flex-1 text-xs border rounded-lg p-1.5"/>
+            <button onclick="rejectUser('${req.name.replace(/'/g,"\\'")}')" class="bg-rose-700 text-white font-bold px-3 rounded-lg text-xs">OK</button>
+          </div>`;
+        list.appendChild(item);
+      });
+    }
+
+    async function approveUser(n) { const r = await apiRequest('approveAccess', { targetName: n }); if (r && r.success) bootstrap(false, true); }
+    async function rejectUser(n) {
+      const safe = n.replace(/[^a-zA-Z0-9]/g,'-');
+      const rm = document.getElementById('rm-' + safe).value.trim();
+      if (!rm) { alert('Please write a remark for the rejection.'); return; }
+      const r = await apiRequest('rejectAccess', { targetName: n, remark: rm });
+      if (r && r.success) bootstrap(false, true);
+    }
+
+    function saveAndSyncState() { saveUserData(); renderApp(); }
+
+    function resetAllData() {
+      if (confirm('Reset all your data on this device? Your timetable and attendance logs will be erased.')) {
+        appState.timetable = {};
+        appState.overrides = {};
+        appState.semStartDate = getTodayStr();
+        saveUserData();
+        document.getElementById('input-sem-start').value = appState.semStartDate;
+        renderApp(); closeModal('settings-modal');
+      }
+    }
+
+    function formatDateStr(d){ return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; }
+    function getTodayStr(){ return formatDateStr(new Date()); }
+    function pct(a,c){ return c>0 ? ((a/c)*100).toFixed(1)+'%' : '—'; }
+    function colorCls(a,c){ if(!c) return 'text-slate-400'; const p=a/c*100; return p<75?'text-rose-500':p<85?'text-orange-500':'text-emerald-600'; }
+
+    function getOrInitOverride(ds){
+      const dw = new Date(ds).getDay();
+      const sch = appState.timetable[dw] || [];
+      if (!appState.overrides[ds]) appState.overrides[ds] = { isHoliday:false, isFullAbsent:false, statuses:sch.map(s=>({...s,status:'Present'})) };
+      return appState.overrides[ds];
+    }
+
+    function effectiveStatuses(ov, schedule) {
+      const result = [];
+      schedule.forEach(sch => {
+        const found = (ov.statuses || []).find(st => st.subject === sch.subject && st.type === sch.type);
+        result.push(found ? { ...found } : { ...sch, status: 'Present' });
+      });
+      return result;
+    }
+
+    function renderApp(){
+      const isApproved = currentUser.status === 'Approved';
+      if (isApproved) { renderCalendar(); renderMonthlyOverview(); renderSemesterOverview(); renderTrendAndProgress(); }
+      renderTimetableList();
+    }
+
+    function renderCalendar(){
+      const grid = document.getElementById('calendar-grid'); grid.innerHTML = '';
+      const y = activeMonthDate.getFullYear(), m = activeMonthDate.getMonth(), today = getTodayStr();
+      document.getElementById('calendar-title').innerText = activeMonthDate.toLocaleString('default',{month:'long',year:'numeric'});
+      const fd = new Date(y,m,1).getDay(), td = new Date(y,m+1,0).getDate();
+      for (let i=0;i<fd;i++){ const c=document.createElement('div'); c.className='aspect-square rounded-xl bg-slate-50/50 opacity-30'; grid.appendChild(c); }
+      for (let d=1;d<=td;d++){
+        const cur=new Date(y,m,d), ds=formatDateStr(cur), sch=appState.timetable[cur.getDay()]||[];
+        const cell=document.createElement('button');
+        cell.className='aspect-square rounded-xl flex items-center justify-center font-bold text-sm transition-all shadow-sm ';
+        if (ds < appState.semStartDate || ds > today) { cell.className += 'day-future cursor-default'; cell.innerText = d; }
+        else {
+          const ov = getOrInitOverride(ds);
+          const eff = effectiveStatuses(ov, sch);
+          let cc='day-present';
+          if (ov.isHoliday) cc='day-holiday';
+          else if (ov.isFullAbsent) cc='day-absent';
+          else if (eff.length) {
+            const ac = eff.filter(s=>s.status==='Absent').length;
+            if (ac===eff.length) cc='day-absent';
+            else if (ac>0) cc='day-partial';
+          } else cc='day-future';
+          cell.className += cc + ' hover:scale-105 cursor-pointer'; cell.innerText = d;
+          cell.onclick = () => openDayModal(ds);
+        }
+        grid.appendChild(cell);
+      }
+    }
+    function changeMonth(d){ activeMonthDate.setMonth(activeMonthDate.getMonth()+d); renderApp(); }
+    function goToToday(){ activeMonthDate = new Date(); renderApp(); }
+
+    function calculateStats(start,end){
+      const stats={}, today=getTodayStr();
+      Object.values(appState.timetable).flat().forEach(s=>{ if(!stats[s.subject]) stats[s.subject]={lec:{c:0,a:0},lab:{c:0,a:0},tut:{c:0,a:0}}; });
+      let cur=new Date(start); const ed=new Date(end);
+      while(cur<=ed){
+        const ds=formatDateStr(cur);
+        if (ds>=appState.semStartDate && ds<=today){
+          const sch = appState.timetable[cur.getDay()] || [];
+          if (sch.length){
+            const ov = getOrInitOverride(ds);
+            if (!ov.isHoliday){
+              effectiveStatuses(ov, sch).forEach(s=>{
+                if(!stats[s.subject]) stats[s.subject]={lec:{c:0,a:0},lab:{c:0,a:0},tut:{c:0,a:0}};
+                let cat = s.type==='Lab'?'lab':s.type==='Tutorial'?'tut':'lec';
+                stats[s.subject][cat].c++;
+                if(!ov.isFullAbsent && s.status==='Present') stats[s.subject][cat].a++;
+              });
+            }
+          }
+        }
+        cur.setDate(cur.getDate()+1);
+      }
+      return stats;
+    }
+
+    function renderMonthlyOverview(){
+      const y=activeMonthDate.getFullYear(), m=activeMonthDate.getMonth();
+      document.getElementById('monthly-sub-title').innerText = `(${activeMonthDate.toLocaleString('default',{month:'long',year:'numeric'})})`;
+      renderTable('monthly-tbody', calculateStats(formatDateStr(new Date(y,m,1)), formatDateStr(new Date(y,m+1,0))));
+    }
+    function renderSemesterOverview(){
+      document.getElementById('semester-sub-title').innerText = `(From ${appState.semStartDate})`;
+      renderTable('semester-tbody', calculateStats(appState.semStartDate, getTodayStr()));
+    }
+    function renderTable(id,stats){
+      const tbody=document.getElementById(id); tbody.innerHTML='';
+      const subs=Object.keys(stats).filter(s=>{const it=stats[s];return (it.lec.c+it.lab.c+it.tut.c)>0;});
+      if(!subs.length){ tbody.innerHTML=`<tr><td colspan="6" class="text-center py-4 text-slate-400 text-xs">No data yet. Add subjects in ⚙️ Settings to begin 📚</td></tr>`; return; }
+      subs.forEach(sub=>{
+        const it=stats[sub], tc=it.lec.c+it.lab.c+it.tut.c, ta=it.lec.a+it.lab.a+it.tut.a;
+        const tr=document.createElement('tr');
+        tr.className='hover:bg-slate-50/80 cursor-pointer transition-colors';
+        tr.onclick=()=>openSubjectModal(sub,it);
+        tr.innerHTML=`
+          <td class="py-3 font-bold text-[#00bfff]">${sub}</td>
+          <td class="py-3 text-center text-slate-600 font-medium">${it.lec.c>0?`${it.lec.a}/${it.lec.c}`:'-'}</td>
+          <td class="py-3 text-center text-slate-600 font-medium">${it.lab.c>0?`${it.lab.a}/${it.lab.c}`:'-'}</td>
+          <td class="py-3 text-center text-slate-600 font-medium">${it.tut.c>0?`${it.tut.a}/${it.tut.c}`:'-'}</td>
+          <td class="py-3 text-center font-bold text-slate-900">${ta}/${tc}</td>
+          <td class="py-3 text-right font-extrabold ${colorCls(ta,tc)}">${pct(ta,tc)}</td>`;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function renderTrendAndProgress(){
+      const chart=document.getElementById('trend-bar-chart'); chart.innerHTML='';
+      const ss=new Date(appState.semStartDate), today=new Date();
+      let sm=new Date(ss.getFullYear(),ss.getMonth(),1);
+      const em=new Date(today.getFullYear(),today.getMonth(),1);
+      let gc=0, ga=0;
+      while(sm<=em){
+        const stats=calculateStats(formatDateStr(sm), formatDateStr(new Date(sm.getFullYear(),sm.getMonth()+1,0)));
+        let mc=0,ma=0;
+        Object.values(stats).forEach(s=>{mc+=s.lec.c+s.lab.c+s.tut.c; ma+=s.lec.a+s.lab.a+s.tut.a;});
+        gc+=mc; ga+=ma;
+        const p=mc>0?Math.round((ma/mc)*100):0;
+        const lbl=sm.toLocaleString('default',{month:'short',year:'2-digit'});
+        const target=new Date(sm);
+        const bar=document.createElement('div');
+        bar.className='flex flex-col items-center flex-1 cursor-pointer group';
+        bar.onclick=()=>openMonthModal(target);
+        bar.innerHTML=`
+          <span class="text-[10px] font-extrabold text-slate-700 mb-1 opacity-90">${p}%</span>
+          <div class="w-7 sm:w-10 bg-slate-100 rounded-t-lg h-32 flex items-end overflow-hidden">
+            <div class="w-full bg-[#00bfff] rounded-t-lg transition-all duration-300 group-hover:bg-blue-600" style="height:${Math.max(p,4)}%"></div>
+          </div>
+          <span class="text-[10px] font-bold text-slate-400 mt-2">${lbl}</span>`;
+        chart.appendChild(bar);
+        sm.setMonth(sm.getMonth()+1);
+      }
+      const op=gc>0?((ga/gc)*100).toFixed(2):'0.00';
+      document.getElementById('stat-conducted').innerText=gc;
+      document.getElementById('stat-attended').innerText=ga;
+      document.getElementById('stat-pct').innerText=op+'%';
+      document.getElementById('overall-pct-text').innerText=op+'%';
+      document.getElementById('donut-fill').setAttribute('stroke-dasharray', `${op},100`);
+    }
+
+    function openMonthModal(monthDate){
+      monthModalTarget = new Date(monthDate);
+      const y=monthDate.getFullYear(), m=monthDate.getMonth();
+      const title=monthDate.toLocaleString('default',{month:'long',year:'numeric'});
+      document.getElementById('month-modal-title').innerText = title;
+      const stats=calculateStats(formatDateStr(new Date(y,m,1)), formatDateStr(new Date(y,m+1,0)));
+      let tc=0, ta=0;
+      const tt={lec:{c:0,a:0},lab:{c:0,a:0},tut:{c:0,a:0}};
+      Object.values(stats).forEach(s=>{ ['lec','lab','tut'].forEach(k=>{ tt[k].c+=s[k].c; tt[k].a+=s[k].a; tc+=s[k].c; ta+=s[k].a; }); });
+      let html = `
+        <div class="bg-blue-50 border border-blue-100 rounded-xl p-4 text-center">
+          <div class="text-3xl font-black text-slate-900">${ta} <span class="text-slate-400 text-xl">/ ${tc}</span></div>
+          <div class="text-xs font-bold text-slate-500 mt-0.5">total classes attended in ${title}</div>
+          <div class="text-base font-black ${colorCls(ta,tc)} mt-1">${pct(ta,tc)}</div>
+        </div>
+        <div class="grid grid-cols-3 gap-2 text-center">
+          ${typeCard('📖 Lectures', tt.lec)}
+          ${typeCard('🔬 Labs', tt.lab)}
+          ${typeCard('📝 Tutorials', tt.tut)}
+        </div>`;
+      const subs=Object.keys(stats).filter(s=>{const it=stats[s];return (it.lec.c+it.lab.c+it.tut.c)>0;});
+      if (subs.length){
+        html += `<div class="space-y-2">`;
+        subs.forEach(sub=>{
+          const s=stats[sub];
+          html += `
+            <div class="bg-slate-50 border border-slate-100 rounded-xl p-3">
+              <div class="font-bold text-xs text-[#00bfff] mb-1.5">${sub}</div>
+              <div class="grid grid-cols-3 gap-1 text-[10px] font-semibold text-slate-600 text-center">
+                <div>Lec ${s.lec.a}/${s.lec.c}<br/><span class="font-black ${colorCls(s.lec.a,s.lec.c)}">${pct(s.lec.a,s.lec.c)}</span></div>
+                <div>Lab ${s.lab.a}/${s.lab.c}<br/><span class="font-black ${colorCls(s.lab.a,s.lab.c)}">${pct(s.lab.a,s.lab.c)}</span></div>
+                <div>Tut ${s.tut.a}/${s.tut.c}<br/><span class="font-black ${colorCls(s.tut.a,s.tut.c)}">${pct(s.tut.a,s.tut.c)}</span></div>
+              </div>
+            </div>`;
+        });
+        html += `</div>`;
+      } else {
+        html += `<p class="text-xs text-center text-slate-400 py-2">No classes conducted this month.</p>`;
+      }
+      document.getElementById('month-modal-content').innerHTML = html;
+      openModal('month-modal');
+    }
+
+    function typeCard(label, t){
+      return `<div class="bg-slate-50 border border-slate-100 rounded-xl p-2">
+        <div class="text-[10px] font-bold text-slate-400">${label}</div>
+        <div class="text-sm font-black text-slate-800">${t.a}/${t.c}</div>
+        <div class="text-[10px] font-black ${colorCls(t.a,t.c)}">${pct(t.a,t.c)}</div>
+      </div>`;
+    }
+
+    function jumpToMonthFromModal(){ activeMonthDate = new Date(monthModalTarget); closeModal('month-modal'); renderApp(); }
+
+    function openDayModal(ds){
+      selectedDateStr=ds;
+      const ov=getOrInitOverride(ds);
+      const sch = appState.timetable[new Date(ds).getDay()] || [];
+      ov.statuses = effectiveStatuses(ov, sch);
+      document.getElementById('modal-date-title').innerText=ds;
+      document.getElementById('modal-day-name').innerText=new Date(ds).toLocaleDateString('en-US',{weekday:'long'});
+      document.getElementById('toggle-holiday').checked=ov.isHoliday;
+      document.getElementById('toggle-full-absent').checked=ov.isFullAbsent;
+      renderDayModalSchedule();
+      openModal('day-modal');
+    }
+    function renderDayModalSchedule(){
+      const list=document.getElementById('modal-schedule-list'); list.innerHTML='';
+      const ov=appState.overrides[selectedDateStr];
+      if (ov.isHoliday || ov.isFullAbsent){ list.innerHTML=`<p class="text-xs text-center text-slate-400 py-6 font-semibold">Day override active (Holiday / Full Absent).</p>`; return; }
+      if (!ov.statuses.length){ list.innerHTML=`<p class="text-xs text-center text-slate-400 py-6 font-semibold">No classes scheduled on this day.</p>`; return; }
+      ov.statuses.forEach((s,i)=>{
+        const it=document.createElement('div');
+        it.className='flex items-center justify-between bg-slate-50 p-3 rounded-xl border border-slate-100';
+        it.innerHTML=`
+          <div><span class="font-extrabold text-xs text-slate-900">${s.subject}</span><span class="text-[10px] font-semibold text-slate-400 block">${s.type}</span></div>
+          <select onchange="updateClassStatus(${i},this.value)" class="text-xs font-bold border rounded-lg p-1.5 bg-white text-slate-800">
+            <option value="Present"${s.status==='Present'?' selected':''}>Present</option>
+            <option value="Absent"${s.status==='Absent'?' selected':''}>Absent</option>
+          </select>`;
+        list.appendChild(it);
+      });
+    }
+    function updateClassStatus(i,v){ appState.overrides[selectedDateStr].statuses[i].status=v; saveUserData(); renderApp(); }
+    function toggleHoliday(c){ appState.overrides[selectedDateStr].isHoliday=c; if(c) appState.overrides[selectedDateStr].isFullAbsent=false; saveUserData(); renderDayModalSchedule(); renderApp(); }
+    function toggleFullAbsent(c){ appState.overrides[selectedDateStr].isFullAbsent=c; if(c) appState.overrides[selectedDateStr].isHoliday=false; saveUserData(); renderDayModalSchedule(); renderApp(); }
+
+    function openSubjectModal(name,item){
+      document.getElementById('subject-modal-title').innerText = name;
+      const tc=item.lec.c+item.lab.c+item.tut.c, ta=item.lec.a+item.lab.a+item.tut.a;
+      document.getElementById('subject-modal-content').innerHTML = `
+        <div class="bg-blue-50 border border-blue-100 rounded-xl p-3 text-center">
+          <span class="text-2xl font-black text-slate-900">${ta} <span class="text-slate-400 text-base">/ ${tc}</span></span>
+          <span class="text-sm font-black ${colorCls(ta,tc)} ml-2">${pct(ta,tc)}</span>
+          <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Overall</div>
+        </div>
+        ${subjectTypeRow('📖 Lectures', item.lec)}
+        ${subjectTypeRow('🔬 Labs', item.lab)}
+        ${subjectTypeRow('📝 Tutorials', item.tut)}`;
+      openModal('subject-modal');
+    }
+    function subjectTypeRow(label, t){
+      return `<div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+        <div class="flex justify-between items-center">
+          <span class="font-bold text-xs text-slate-700">${label}</span>
+          <span class="text-xs font-bold text-slate-600">${t.a} / ${t.c}</span>
+        </div>
+        <div class="flex justify-between items-center mt-1">
+          <div class="flex-1 bg-slate-200 rounded-full h-1.5 mr-3">
+            <div class="bg-[#00bfff] h-1.5 rounded-full" style="width:${t.c>0?(t.a/t.c*100):0}%"></div>
+          </div>
+          <span class="text-xs font-black ${colorCls(t.a,t.c)}">${pct(t.a,t.c)}</span>
+        </div>
+      </div>`;
+    }
+
+    function addScheduleEntry(){
+      const day=parseInt(document.getElementById('input-day-select').value);
+      const subInput=document.getElementById('input-sub-name');
+      const sub=subInput.value.trim();
+      const type=document.getElementById('input-type-select').value;
+      const err=document.getElementById('sub-error');
+      if(!sub){
+        err.classList.remove('hidden');
+        subInput.classList.add('shake','border-rose-400');
+        setTimeout(()=>subInput.classList.remove('shake'),500);
+        subInput.focus();
+        return;
+      }
+      err.classList.add('hidden');
+      subInput.classList.remove('border-rose-400');
+      if(!appState.timetable[day]) appState.timetable[day]=[];
+      appState.timetable[day].push({subject:sub,type});
+      subInput.value='';
+      saveUserData(); renderTimetableList(); renderApp();
+      subInput.focus();
+    }
+    function removeScheduleEntry(day,idx){
+      appState.timetable[day].splice(idx,1);
+      if(!appState.timetable[day].length) delete appState.timetable[day];
+      saveUserData(); renderTimetableList(); renderApp();
+    }
+    function renderTimetableList(){
+      const c=document.getElementById('timetable-list'); c.innerHTML='';
+      const dn=['Sun','Mon','Tue','Wed','Thu','Fri','Sat']; let has=false;
+      Object.keys(appState.timetable).forEach(d=>{
+        appState.timetable[d].forEach((item,i)=>{
+          has=true;
+          const r=document.createElement('div');
+          r.className='flex justify-between items-center bg-white p-2 rounded border';
+          r.innerHTML=`<span><b>${dn[d]}:</b> ${item.subject} (${item.type})</span><button onclick="removeScheduleEntry(${d},${i})" class="text-rose-500 font-bold px-1 hover:text-rose-700">✕</button>`;
+          c.appendChild(r);
+        });
+      });
+      if(!has) c.innerHTML=`<p class="text-slate-400 text-center py-2">No subjects yet. Add your first class above 📚</p>`;
+    }
+
+    function saveSettings(){
+      const sv=document.getElementById('input-sem-start').value;
+      const av=document.getElementById('input-api-url').value.trim();
+      if(sv) appState.semStartDate=sv;
+      if (currentUser.role==='Admin'){
+        appState.apiUrl=av;
+        localStorage.setItem('attendly_api_url', av); // save for all users on this device
+      }
+      saveUserData(); renderApp(); closeModal('settings-modal');
+      if (currentUser.name) bootstrap(false,true);
+    }
+
+    function openModal(id){ document.getElementById(id).classList.remove('hidden'); document.getElementById(id).classList.add('flex'); }
+    function closeModal(id){ document.getElementById(id).classList.add('hidden'); document.getElementById(id).classList.remove('flex'); }
+  </script>
+</body>
+</html>
